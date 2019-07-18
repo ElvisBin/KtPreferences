@@ -33,7 +33,7 @@ class Preference<T>(val key:String, val default: T, val flieName : String = "def
            is Int   -> prefs.getInt(key,default)
            is Long   -> prefs.getLong(key,default)
            else -> throw IllegalArgumentException("不支持的类型")
-       }as T
+       } as T
    }
     //设置当前值
     @RequiresApi(Build.VERSION_CODES.GINGERBREAD)
